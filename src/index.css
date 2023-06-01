@@ -5,9 +5,132 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Titillium Web', sans-serif;
+
+}
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap");
+
+
+
+
+label{
+  width: 200px;
+}
+.card{
+
+    box-shadow: 0px 0px 10px 0px #343434;
+    border: 0px;
+    padding: 10px;
+}
+label, .button{
+  border:0px;
+
+  margin-left:20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  background: rgb(0, 146, 27);
+  border-radius: 11px;
+  text-decoration:none;
+  color:white;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+font-size: 22px;
+  box-shadow: inset 0 0 15px rgba(191, 6, 6, 0), inset 0 0 20px rgba(255, 255, 255, 0), 0px 6px 0px rgb(0, 111, 20), 0px 0px 0px rgb(0, 111, 20), inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  transition:100ms all;
+  cursor:pointer;
+}
+.button{
+  background: rgb(0, 107, 146);
+  box-shadow: inset 0 0 15px rgba(191, 6, 6, 0), inset 0 0 20px rgba(255, 255, 255, 0), 0px 6px 0px rgb(0, 91, 124), 0px 0px 0px rgb(0, 91, 124), inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  width: 70px;
+  border-radius: 50%;
+  height: 70px;
+ 
+}
+.button:active{
+  margin-top:3px;
+  box-shadow: inset 0 0 15px rgba(66, 66, 66, 0), inset 0 0 20px rgba(255, 255, 255, 0), 0px 3px 0px rgb(10, 41, 82), 0px 0px 0px rgb(0, 111, 20), inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  color:#cacaca;
+  transition:100ms all;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type="radio"]{
+  display: none;
+}
+
+input[type="radio"]:checked+label { 
+  margin-top:3px;
+  box-shadow: inset 0 0 15px rgba(66, 66, 66, 0), inset 0 0 20px rgba(255, 255, 255, 0), 0px 3px 0px rgb(87 87 87), 0px 0px 0px rgb(0, 111, 20), inset 0px 0px 4px rgba(255, 255, 255, 0.2);
+  color:#cacaca;
+  transition:100ms all;
+}
+
+#soruBaslik{
+  font-family: 'Titillium Web', sans-serif;
+  font-size:40px;
+
+}
+
+h4{
+  font-weight: 600;
+}
+
+.col-sm-4{
+  margin-bottom: 50px;
+}
+
+.footer{ 
+  position: sticky;
+  bottom:0;
+  font-family:sans-serif;
+  width: 100%;
+  padding-top:25px;
+  padding-bottom:25px;
+  background-color: rgb(210, 239, 239);
+}
+.question{
+
+    display:flex;
+    
+
+}
+
+
+@media all and (max-width:992px){
+
+
+}
+
+@media all and (max-width: 900px) { 
+  #soruBaslik{
+  
+    font-size: 30px;
+
+  }
+    .question{
+      flex-direction: column;
+     
+    }
+
+    .card-body{
+      display: inline-grid;
+    } 
+
+
+    label{
+      margin-top:20px;
+      margin-left: 0px;
+    }
+    input[type="radio"]:checked+label { 
+
+      margin-top:23px ;
+
+    }
+
+}
+
+.col-lg-12{
+
+
+
 }
