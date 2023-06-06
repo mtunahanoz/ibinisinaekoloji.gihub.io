@@ -14,7 +14,7 @@ function Animal(props) {
   <img class="card-img-top" src={props.url} alt="Card image cap"/>
   <div class="card-body">
   <h4 className="card-title" >{props.name}</h4>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">{props.description}</p>
     <div style={{padding: "25px", backgroundColor: "wheat", borderRadius: "20px"}}>
     <p className="card-text" >Ortalama Nüfus</p>
     <div class="progress " style={{backgroundColor:"#252e36"}}>
