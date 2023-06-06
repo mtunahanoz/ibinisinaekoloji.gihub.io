@@ -3,6 +3,8 @@ import { useSearchParams } from 'react-router-dom'
 import Animal from './components/animal';
 import Footer from './Footer'
 import "./result.css"
+import QRCode from 'react-qr-code';
+import EkolojikAyakIziTesti from './AnimalPopulationCalculator';
 
 function Result() {
 
@@ -15,7 +17,7 @@ function Result() {
         <center>
 
     
-        <div className="jumbotron">
+<div className="jumbotron">
 
             
 <h1>Ekolojik Ayak İzi Sonucunuz</h1>
@@ -55,6 +57,8 @@ function Result() {
 <br></br>
 <br></br>
 
+<EkolojikAyakIziTesti footprint="1.2"></EkolojikAyakIziTesti>
+
         </center>
         <div className="container"> 
         <center>
@@ -74,6 +78,43 @@ function Result() {
             </center>
            
       </div>
+
+<center>
+
+<div className="jumbotron2" style={{backgroundImage:"url(a)"}}>
+
+<div className="container"> 
+
+<div className='row' style={{alignItems:"center"}}>
+<div className='col-sm-6 '>
+
+<h1>Arttırılmış Gerçeklik Deneyimi İçin</h1>
+<br/>
+
+
+<button className='btn btn-success btn-lg'><i class="fa-brands fa-google-play"></i> İbn-i Sina Ekoloji AR</button>
+
+<br/>
+<br/>
+<span>Adım 1: Uygulamayı indir </span> <br/>
+<span>Adım 2: Sağdaki QR kodu okut (bilgisayardan mobile) ya da QR koda tıkla (mobil üzerinden) </span> <br/>
+<span>Adım 3: Arttırılmış Gerçeklik Deneyimini Yaşa</span> <br/>
+
+</div>
+<div className='col-sm-6 '>
+
+<QRCode size={400} bgColor="azure" fgColor="black" value="https://ibnisinaekoloji.vercel.app/result?param1=0"></QRCode>
+
+</div>
+
+</div>
+
+        </div>
+        </div>
+
+</center>
+
+      
       <center>
       <Footer></Footer> 
 
