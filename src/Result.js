@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import Animal from './components/animal';
 import Footer from './Footer'
-
+import "./result.css"
 
 function Result() {
 
@@ -11,12 +11,51 @@ function Result() {
 
     return (
       <div>
+        
+        <center>
+
+    
         <div className="jumbotron">
 
-          
+            
+<h1>Ekolojik Ayak İzi Sonucunuz</h1>
 
-  
+<br></br>
+<br></br>
+<br></br>
+
+<div className='row' style={{alignItems:"center"}}>
+<div className='col-sm-4 '>
+
+<h5>Dünya Ortalaması</h5>
+<h5>2.7 kha <i className="fa-solid fa-earth-europe" style={{color:"dodgerblue"}}></i></h5>
+
+</div>
+<div className='col-sm-4 '>
+
+<h1>Sizin Sonucunuz</h1>
+<h1>2.7 kha <i className="fa-solid fa-seedling"  style={{color:"olivedrab"}}></i></h1>
+
+</div>
+<div className='col-sm-4 '>
+
+<h5>Türkiye Ortalaması</h5>
+<h5>2.7 kha <i className="fa-solid fa-people-roof"  style={{color:"dodgerblue"}}></i></h5>
+
+</div>
+</div>
+
         </div>
+        <br></br>
+<br></br>
+<br></br>
+        <h1>Ekolojik Yaşama Etkileriniz</h1>
+
+<br></br>
+<br></br>
+<br></br>
+
+        </center>
         <div className="container"> 
         <center>
             <div className="row" >
