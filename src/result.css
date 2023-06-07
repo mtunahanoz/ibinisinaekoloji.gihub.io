@@ -1,5 +1,5 @@
 .jumbotron{
-    background-image: url(https://4kwallpapers.com/images/wallpapers/bear-lake-rocky-mountain-national-park-sunset-reflection-5120x2880-8354.jpg);
+    background-image: url("./bg.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
