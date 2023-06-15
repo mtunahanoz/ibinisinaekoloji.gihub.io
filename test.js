@@ -7,23 +7,26 @@ class EkolojikAyakIziUygulamasi extends React.Component {
 
     azaltHayvanNufusu = (hayvanlar, kha_degeri) => {
 
-        console.log(kha_degeri)
         let azalma_orani;
 
-        if (kha_degeri >= 1 || kha_degeri >= 1.5) {
-          azalma_orani = Math.random() * 0.07;
-        } else if (kha_degeri > 1.5 || kha_degeri <= 2) {
-          azalma_orani = Math.random() * 0.09 + 0.1;
-        } else if (kha_degeri > 2 || kha_degeri < 2.5) {
-          azalma_orani = Math.random() * 0.14 + 0.23;
-        } else if (kha_degeri > 2.5 || kha_degeri <= 3) {
-          azalma_orani = Math.random() * 0.1 + 0.1;
-        } else if (kha_degeri > 3 || kha_degeri <= 3.5) {
-          azalma_orani = Math.random() * 0.20 + 0.30;
-        } else if (kha_degeri > 3.5 || kha_degeri <= 4) {
-          azalma_orani = Math.random() * 0.40 + 0.70;
+        if (kha_degeri >= 1 && kha_degeri < 1.5) {
+          azalma_orani = Math.random() * 0.04;
+        } else if (kha_degeri >= 1.5 && kha_degeri < 2) {
+          azalma_orani = Math.random() * 0.04 + 0.07;
+        } else if (kha_degeri >= 2 && kha_degeri < 2.5) {
+          azalma_orani = Math.random() * 0.06 + 0.13;
+        } else if (kha_degeri >= 2.5 && kha_degeri < 3) {
+          azalma_orani = Math.random() * 0.09 + 0.31;
+        } else if (kha_degeri >= 3 && kha_degeri < 3.5) {
+          azalma_orani = Math.random() * 0.10 + 0.50;
+        } else if (kha_degeri >= 3.5 && kha_degeri < 4) {
+          azalma_orani = Math.random() * 0.06 + 0.68;
+        } else if (kha_degeri >= 4 && kha_degeri < 4.5) {
+          azalma_orani = Math.random() * 0.06 + 0.80;
+        } else if (kha_degeri >= 4.5 && kha_degeri <= 5) {
+          azalma_orani = Math.random() * 0.09 + 0.91;
         } else {
-          throw new Error("Geçersiz kHa değeri. 1 ile 4 arasında olmalıdır.");
+          throw new Error("Geçersiz kHa değeri. 1 ile 5 arasında olmalıdır.");
         }
     
         const yeniHayvanlar = { ...hayvanlar };
@@ -42,38 +45,32 @@ class EkolojikAyakIziUygulamasi extends React.Component {
     const { kha_degeri } = this.props;
     const hayvanlar = {
       "Kanguru": {
-        nufus: 45000000,
-        toplamNufus: 45000000,
+        nufus: 100,
         image_url: 'https://cdn-icons-png.flaticon.com/512/4082/4082120.png',
         description: 'Anavatanları Avustralya Kıtası ve Yeni Ginedir. Yaklaşık 45 milyon civarı bir nüfusa sahiptirler. '
       },
       "Ayı": {
-        nufus: 6000000,
-        toplamNufus: 6000000,
+        nufus: 200,
         image_url: 'https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/bear.png',
         description: ' Anavatanları Kuzey Amerika, Güney Amerika, Avrupa ve Asya kıtalarında yaşarlar.'
       },
       "Deve": {
-        nufus: 35000000,
-        toplamNufus: 35000000,
+        nufus: 150,
         image_url: 'https://cdn-icons-png.flaticon.com/512/616/616534.png',
         description: 'Anavatanları Orta Doğu ve Kuzey Afrikadır. Yaklaşık olarak 35 milyon civarı bir nüfusa sahiptirler.'
       },
       "Lama": {
-        nufus: 7000000,
-        toplamNufus: 7000000,
+        nufus: 80,
         image_url: 'https://cdn-icons-png.flaticon.com/512/7432/7432729.png',
         description: "Anavatanları Güney Amerika'nın And Dağları bölgesidir. Yaklaşık 7 milyon civarı bir nüfusa sahiptirler"
       },
       "Yunus": {
-        nufus: 7000000,
-        toplamNufus: 7000000,
+        nufus: 120,
         image_url: 'https://cdn-icons-png.flaticon.com/512/408/408036.png',
         description: 'Anavatanları okyanuslar ve denizlerdir, özellikle sıcak ve ılıman sularda yaşarlar. Yaklaşık olarak 1 milyon civarı bir nüfusa sahiptirler.'
       },
       "Kutup Ayısı": {
-        nufus: 25000,
-        toplamNufus: 25000,
+        nufus: 90,
         image_url: 'https://cdn-icons-png.flaticon.com/512/371/371714.png',
         description: "Anavatanları Arktik bölgelerdir ve genellikle Kuzey Kutbu'nda yaşarlar. Yaklaşık olarak 25.000 civarı bir nüfusa sahiptirler"
       }
@@ -97,18 +94,17 @@ class EkolojikAyakIziUygulamasi extends React.Component {
 
         
         <div className='row'>
-          {Object.entries(yeniHayvanlar).map(([hayvan, { nufus, image_url, description, toplamNufus }]) =>
+          {Object.entries(yeniHayvanlar).map(([hayvan, { nufus, image_url, description }]) =>
           
 
-        
+
           (
             
             <div className='col-sm-4'>
                 <li key={hayvan}>
-              {hayvan}: {nufus} 
-              
+              {hayvan}: {nufus}
             </li>
-                 <Animal name={hayvan} description={description} url={image_url} nufus={nufus} toplamNufus={toplamNufus}></Animal>
+                 <Animal name={hayvan} description={description} url={image_url}></Animal>
             </div>
        
           ))}
@@ -135,7 +131,7 @@ class EkolojikAyakIziUygulamasi extends React.Component {
 </div>
 <div className='col-sm-6 '>
 
-<a href={url}><QRCode  viewBox={`0 0 502 500`} bgColor="azure" fgColor="black" value={url}></QRCode>
+<a href={url}><QRCode size={400} bgColor="azure" fgColor="black" value={url}></QRCode>
 </a>
 </div>
 

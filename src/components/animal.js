@@ -7,7 +7,7 @@ function Animal(props) {
 
     const [searchParams, setSearchParams] = useSearchParams();
 
-
+  let formul = Math.floor(((props.nufus / props.toplamNufus) * 100))
     return (
       
       <div class="card" style={{width: "80%", border: "0px"}}>
@@ -16,17 +16,13 @@ function Animal(props) {
   <h4 className="card-title" >{props.name}</h4>
     <p class="card-text">{props.description}</p>
     <div style={{padding: "25px", backgroundColor: "wheat", borderRadius: "20px"}}>
-    <p className="card-text" >Ortalama Nüfus</p>
-    <div class="progress " style={{backgroundColor:"#252e36"}}>
-    <div class="progress-bar bg-success"  style={{width: "25%"}} ></div>
-</div>
-          <p className="card-text" style={{marginTop:"revert"}}>Ortalama Nüfus</p>
-          <div class="progress" style={{backgroundColor:"#252e36"}}>
-  <div class="progress-bar "  style={{width: "15%"}} ></div>
+    <p className="card-text" >Ortalama Nüfus:   ~{props.toplamNufus} </p>
+  
 
-</div>hiç
-
+   <p className="card-text" style={{marginTop:"revert", fontWeight:"bold"}}>Verdiğiniz Zarar: <span style={{fontWeight:"bolder", color:"red"}}> -{props.nufus}</span></p>
+   <p className="card-text" style={{marginTop:"revert", fontWeight:"bold"}}>Kalan Nüfus:  <span style={{fontWeight:"bolder", color:"green"}}>{props.toplamNufus - props.nufus}</span></p>   
     </div>
+
   </div>
 </div>
 
